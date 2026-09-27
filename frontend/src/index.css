@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-panel text-ink;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.tv-card {
+  @apply bg-white border border-gray-200 rounded-md p-4;
+}
+
+.tv-btn {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors;
+}
+.tv-btn-primary {
+  @apply tv-btn bg-ink text-white border-ink hover:bg-gray-800;
+}
+.tv-btn-secondary {
+  @apply tv-btn bg-white text-ink border-gray-300 hover:bg-gray-50;
+}
+
+.tv-badge {
+  @apply inline-block px-2 py-0.5 rounded text-xs font-medium;
+}

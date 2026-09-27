@@ -1,0 +1,43 @@
+# --- Web framework ---
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# --- Data validation / settings ---
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# --- Database ---
+sqlalchemy==2.0.35
+alembic==1.13.2
+
+# --- Computer vision ---
+opencv-python-headless==4.13.0.92
+numpy==2.4.4
+scipy==1.17.1
+mediapipe==0.10.33
+
+# --- Object detection / tracking (optional but recommended) ---
+# ultralytics provides YOLO. If unavailable, the app automatically falls
+# back to FallbackMotionDetector (see app/cv/detector.py) and clearly labels
+# results accordingly.
+ultralytics==8.3.28
+supervision==0.24.0   # provides ByteTrack; optional, see app/cv/tracker.py
+
+# --- Machine learning ---
+scikit-learn==1.8.0
+xgboost==2.1.1
+joblib==1.5.3
+
+# --- PDF report generation ---
+reportlab==4.4.10
+
+# --- Utilities ---
+python-jose[cryptography]==3.3.0   # JWT (optional auth)
+passlib[bcrypt]==1.7.4             # password hashing (optional auth)
+python-dotenv==1.0.1
+
+# --- Testing ---
+pytest==8.3.3
+pytest-cov==5.0.0
+httpx==0.27.2   # required by fastapi.testclient
